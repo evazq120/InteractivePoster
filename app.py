@@ -195,7 +195,10 @@ def create_poster():
     my_poster.add_section(title="Discussion",
                           text="While exploring the node sub-kernel it was found that the definition of protein pair-wise \
                                 similarity was largely dependent on the construction of the node sub-kernel. This method is \
-                                capable of matching segments of a protein to itself. An instance of this   ")
+                                capable of matching segments of a protein to itself. One example of this was a chain of the \
+                                protein, with PDB ID 1OPK, matching up with the entire protein. Construction of the node \
+                                sub-kernel is important for the reason that if too many features are used in the kernel then\
+                                pair-wise similarity is skewed due to over comparison of the nodes.")
         #img = {"filename": "Protein_Graph_Process.png", "height": "6in", "width":"8in", "caption":""})                 
         
        
