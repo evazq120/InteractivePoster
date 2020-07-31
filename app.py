@@ -39,26 +39,27 @@ def create_poster():
 
     # Add sections to first column then add new column
     my_poster.add_section(title="Abstract",
-        text="  Graphs are structures that are capable of representing the relationships between sets.\
-            Nodes are used to represent objects of these sets and the edges of the graph can show relations\
-            between these nodes. Using these properties graphical representations of proteins can be generated \
-            from information gathered from the Protein Data Bank (PDB).\
-            These protein graphs are beneficial for the analysis of proteins due to their ability to store   \
-            multiple features within both the nodes and edges of the graph.\
-            Several methods exist to compute the similarity between graphs. Using GraphDot, a GPU-accelerated\
-            Python library, a marginalized graph kernel based of the random walk paths is built \
-            to compute graph similarity. This package allows for the implementation of several node and edge \
-            features in the kernel process allowing for a spectrum of features to be analyzed.")
+                          text="Graphs are structures that are capable of representing the relationships between sets.\
+                                Nodes are used to represent objects of these sets and the edges of the graph can show relations\
+                                between these nodes. Using these properties graphical representations of proteins can be\
+                                generated from information gathered from the Protein Data Bank (PDB).\
+                                These protein graphs are beneficial for the analysis of proteins due to their ability to store  \
+                                multiple features within both the nodes and edges of the graph.\
+                                Several methods exist to compute the similarity between graphs. Using GraphDot, a GPU-\
+                                accelerated Python library, a marginalized graph kernel based of the random walk\
+                                paths is built to compute graph similarity. This package allows for the implementation \
+                                of several node and edge features in the kernel process allowing for a spectrum \
+                                of features to be analyzed.")
                           
     my_poster.add_section(title="Background Info",
-        text="Several biological pathways are determined by protein functionality. Understanding\
-        the way in which proteins control or regulate these pathways could lead to advances in medical\
-        treatments and therapies. A protein’s structure directly affects its functionality. Using a \
-        marginalized graph kernel, the connections between structure and functionality can be further \
-        explored by comparing the similarity of protein graph structures. ")
+                          text="Several biological pathways are determined by protein functionality. Understanding\
+                                the way in which proteins control or regulate these pathways could lead to advances in medical\
+                                treatments and therapies. A protein’s structure directly affects its functionality. Using a \
+                                marginalized graph kernel, the connections between structure and functionality can be further \
+                                explored by comparing the similarity of protein graph structures. ")
     my_poster.add_section(title="Marginalized Graph kernel", color=colors.LBNL_BLUE,
-        text="This method utilizes a Marginalized Graph Kernel to compute graph pairwise similarity." \
-              "                         world!")
+                          text="This method utilizes a Marginalized Graph Kernel to compute graph pairwise similarity.") 
+                                      
 
     my_poster.next_column()
 
