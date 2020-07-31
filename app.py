@@ -58,7 +58,7 @@ def create_poster():
                                 marginalized graph kernel, the connections between structure and functionality can be further \
                                 explored by comparing the similarity of protein graph structures. ")
     my_poster.add_section(title="Marginalized Graph kernel", color=colors.LBNL_BLUE,
-                          text="This method utilizes a Marginalized Graph Kernel to compute graph pairwise similarity.",
+                          text="This method utilizes a Marginalized Graph Kernel to compute graph pairwise similarity. ",
                           img ={"filename":"Picture2.png", "height":"4.125in", "width":"11in", "caption":""}) 
                                       
 
