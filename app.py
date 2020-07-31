@@ -190,8 +190,8 @@ def create_poster():
                           The node kernel was able to identify high similarity between protein chains and their parent\
                           protein. It failed to identify 2JWW as dissimilar to the test set when only comparing residue\
                           type in the node sub-kernel.",
-                          plot={"fig":fig,"caption":"Effects of Node Features Compared in Sub-Kernel on Protein Similarity-\
-                                 Parentheses denote Protein Chain"})
+                          plot={"fig":fig,"caption":"Effects of Node Features Sub-Kernel on Protein Similarity-\
+                                 Parentheses Denote Protein Chain"})
     
     my_poster.next_column()
 
