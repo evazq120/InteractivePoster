@@ -58,7 +58,7 @@ def create_poster():
         explored by comparing the similarity of protein graph structures. ")
     my_poster.add_section(title="Marginalized Graph kernel", color=colors.LBNL_BLUE,
         text="This method utilizes a Marginalized Graph Kernel to compute graph pairwise similarity." \
-              "                        hello world!")
+              "                         world!")
 
     my_poster.next_column()
 
