@@ -90,7 +90,7 @@ class iPoster:
         return title, authors, institutions
 
     #--
-    def add_section(self, title, text=None, img=None, plot=None, color="#0033cc", height=None, children=[]):
+    def add_section(self, title, text=None, img=None, plot=None,color="#0033cc", height=None, children=[]):
         childs = []
         if text: childs.append(html.P(text, style={"font-size":"34px"}))
         if img:
@@ -103,6 +103,7 @@ class iPoster:
             self.figure_counter += 1
             childs.append(html.P("Figure {}. ".format(self.figure_counter), style={"font-size":"28px", "font-weight":"bold"}))
             childs.append(html.P(plot["caption"], style={"font-size":"28px"}))
+        
 
         childs += children
         self.sects.append(PosterSection(title, color, childs, height=height))
