@@ -61,8 +61,10 @@ def create_poster():
                           text="Using a marginalized graph kernel, the pair-wise similarity of graphs can be computed. This\
                                 method defines similarity as the expectancy of similar random walk paths on both graphs. \
                                 Along with the similarity of random walks paths, this method includes node and edge \
-                                sub-kernels that compute node-wise and edge-wise similarity. With this kernel method,\
-                                protein graph sturctures can be compared.  ",
+                                sub-kernels that compute node-wise and edge-wise similarity. With this kernel method\
+                                the pair-wise similarities of protein graph structures can be defined. Understanding how\
+                                structure and other protein characterstics can affect protein similarity can help to \
+                                understand the connection betwen protein stucture and functionality.",
                           img ={"filename":"Picture2.png", "height":"4.125in", "width":"11in", "caption":"Equation of \
                                 Marginalized Graph Kernel"}) 
                                       
