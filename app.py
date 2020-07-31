@@ -58,7 +58,10 @@ def create_poster():
                                 marginalized graph kernel, the connections between structure and functionality can be further \
                                 explored by comparing the similarity of protein graph structures. ")
     my_poster.add_section(title="Marginalized Graph kernel", color=colors.LBNL_BLUE,
-                          text="This method utilizes a Marginalized Graph Kernel to compute graph pairwise similarity. ",
+                          text="Using a marginalized graph kernel, the pair-wise similarity of graphs can be computed. This\
+                                method defines similarity as the expectancy of similar random walk paths on both graphs. \
+                                Along with the random walks, this method includes node and edge sub-kernels that compute\
+                                node-wise and edge-wise similarity. A ",
                           img ={"filename":"Picture2.png", "height":"4.125in", "width":"11in", "caption":""}) 
                                       
 
@@ -198,9 +201,7 @@ def create_poster():
                                 capable of matching segments of a protein to itself. One example of this was a chain of the \
                                 protein, with PDB ID 1OPK, matching up with the entire protein. Construction of the node \
                                 sub-kernel is important for the reason that if too many features are used in the kernel then\
-                                pair-wise similarity is skewed due to over comparison of the nodes.")
-        #img = {"filename": "Protein_Graph_Process.png", "height": "6in", "width":"8in", "caption":""})                 
-        
+                                pair-wise similarity is skewed due to over comparison of the nodes. ")
        
     my_poster.add_section(title="Future Work", 
                           text="The focus of this work was on understanding the abilities \
