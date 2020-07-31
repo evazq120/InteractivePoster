@@ -58,7 +58,8 @@ def create_poster():
                                 marginalized graph kernel, the connections between structure and functionality can be further \
                                 explored by comparing the similarity of protein graph structures. ")
     my_poster.add_section(title="Marginalized Graph kernel", color=colors.LBNL_BLUE,
-                          text="This method utilizes a Marginalized Graph Kernel to compute graph pairwise similarity.") 
+                          text="This method utilizes a Marginalized Graph Kernel to compute graph pairwise similarity.",
+                          img ={"filename":"Picture2.png", "height":"4.125in", "width":"11in", "caption":""}) 
                                       
 
     my_poster.next_column()
@@ -70,6 +71,7 @@ def create_poster():
     fig = make_subplots(1, 3,
                        subplot_titles=("Secondary Structure", "Residue Type", "Secondary Structure & Residue Type"))
     
+   
     fig.add_trace(go.Heatmap(
                    z=[[1.,0.80937215,0.81653635,0.68685985,0.8439209,0.85736667, 
                0.8085844, 0.83120887, 0.75444772, 0.55203045] ,
@@ -91,8 +93,8 @@ def create_poster():
               0.74430673, 0.71339418, 1.        , 0.6611413 ],
              [0.55203045, 0.63524418 ,0.51006481 ,0.62848796 ,0.65863552 ,0.62807319,
               0.63574122 ,0.50124995 ,0.6611413  ,1.        ]],
-                   x=['1at1', '1at3', '1at5', '1at7', '1opk','1qy2','1qy4','1qy6','1qy8','2jww'],
-                   y=['1at1', '1at3', '1at5', '1at7', '1opk','1qy2','1qy4','1qy6','1qy8','2jww'],
+                   x=['1U07', '1IHR (A)', '2ABL', '1OPK (A)', '1QVC (A)','1QVC (B)','1PBG','1HZ6(A)','1OPK','2JWW'],
+                   y=['1U07', '1IHR (A)', '2ABL', '1OPK (A)', '1QVC (A)','1QVC (B)','1PBG','1HZ6(A)','1OPK','2JWW'],
                    colorscale = 'Electric',
                    hoverongaps = False, showlegend = False,
                    zmin= 0,
@@ -120,8 +122,8 @@ def create_poster():
         0.92414077, 0.90986309, 0.88803996, 1.        , 0.93925371],
        [0.89149544, 0.89901379, 0.85914015, 0.89806194, 0.90537072,
         0.90491567, 0.89773304, 0.86341196, 0.93925371, 1.        ]],
-                   x=['1at1', '1at3', '1at5', '1at7', '1opk','1qy2','1qy4','1qy6','1qy8','2jww'],
-                   y=['1at1', '1at3', '1at5', '1at7', '1opk','1qy2','1qy4','1qy6','1qy8','2jww'],
+                   x=['1U07', '1IHR (A)', '2ABL', '1OPK (A)', '1QVC (A)','1QVC (B)','1PBG','1HZ6(A)','1OPK','2JWW'],
+                   y=['1U07', '1IHR (A)', '2ABL', '1OPK (A)', '1QVC (A)','1QVC (B)','1PBG','1HZ6(A)','1OPK','2JWW'],
                     colorscale = 'Electric',
                    hoverongaps = False, showlegend = False,
                    zmin= 0,
@@ -148,8 +150,8 @@ def create_poster():
         0.66790049, 0.78333947, 0.74641578, 1.        , 0.68614487],
        [0.59490699, 0.65558052, 0.54115045, 0.65187442, 0.67653398,
         0.66496785, 0.65718255, 0.52987401, 0.68614487, 1.        ]],
-                   x=['1at1', '1at3', '1at5', '1at7', '1opk','1qy2','1qy4','1qy6','1qy8','2jww'],
-                   y=['1at1', '1at3', '1at5', '1at7', '1opk','1qy2','1qy4','1qy6','1qy8','2jww'],
+                   x=['1U07', '1IHR (A)', '2ABL', '1OPK (A)', '1QVC (A)','1QVC (B)','1PBG','1HZ6(A)','1OPK','2JWW'],
+                   y=['1U07', '1IHR (A)', '2ABL', '1OPK (A)', '1QVC (A)','1QVC (B)','1PBG','1HZ6(A)','1OPK','2JWW'],
                    colorscale = 'Electric',
                    hoverongaps = False, showlegend = False,
                    zmin= 0,
@@ -171,11 +173,18 @@ def create_poster():
                                 with PDB code 1OPK.",
                            img={"filename":"Picture1.png", "height":"4.125in", "width":"11in", "caption":""})
     my_poster.add_section(title="Results",
-                          text="Several features are stored in both the nodes and edges of each protein graph. GraphDot allows\
-                                for the inclusion of these features in node and edge subkernels. In order to \
-                                identify the effectiveness of these features we ran the graph kernel\
-                                with different features included in the computation of the subkernels.",
-                          plot={"fig":fig,"caption":"Effects of Node Features Compared in Sub-Kernel on Protein Similarity"})
+                          text="Using a test set of 10 PDB proteins the effect of the node sub-kernels on protein graph\
+                          similarity was explored. This test set included proteins of similar structure with dissimilar\
+                          sequence with other proteins with similar structure with dissimilar sequence as well as the protein\
+                          PDB  2JWW with neither similar sequence nor structure to the rest of the set. The graph kernel \
+                          was able to identify node-wise similarities. Three separate kernels were built with the node \
+                          sub-kernel compared the Residue type, Secondary Structure, and both these features in all\
+                          nodes.  \
+                          The node kernel was able to identify high similarity between protein chains and their parent\
+                          protein. It failed to identify 2JWW as dissimilar to the test set when only comparing residue\
+                          type in the node sub-kernel.",
+                          plot={"fig":fig,"caption":"Effects of Node Features Compared in Sub-Kernel on Protein Similarity-\
+                                 Parentheses denote Protein Chain"})
     
     my_poster.next_column()
 
@@ -185,8 +194,8 @@ def create_poster():
  
     my_poster.add_section(title="Discussion",
                           text="While exploring the node sub-kernel it was found that the definition of protein pair-wise \
-                                similarity was largely dependent on the construction of the node sub-kernel. This method was \
-                                is to able identify   ")
+                                similarity was largely dependent on the construction of the node sub-kernel. This method is \
+                                capable of matching segments of a protein to itself. An instance of this   ")
         #img = {"filename": "Protein_Graph_Process.png", "height": "6in", "width":"8in", "caption":""})                 
         
        
