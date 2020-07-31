@@ -60,9 +60,11 @@ def create_poster():
     my_poster.add_section(title="Marginalized Graph kernel", color=colors.LBNL_BLUE,
                           text="Using a marginalized graph kernel, the pair-wise similarity of graphs can be computed. This\
                                 method defines similarity as the expectancy of similar random walk paths on both graphs. \
-                                Along with the random walks, this method includes node and edge sub-kernels that compute\
-                                node-wise and edge-wise similarity. A ",
-                          img ={"filename":"Picture2.png", "height":"4.125in", "width":"11in", "caption":""}) 
+                                Along with the similarity of random walks paths, this method includes node and edge \
+                                sub-kernels that compute node-wise and edge-wise similarity. With this kernel method,\
+                                protein graph sturctures can be compared.  ",
+                          img ={"filename":"Picture2.png", "height":"4.125in", "width":"11in", "caption":"Equation of \
+                                Marginalized Graph Kernel"}) 
                                       
 
     my_poster.next_column()
